@@ -57,7 +57,7 @@ const Checkout = () => {
                             <label className="form-label">Teléfono</label>
                             <input type="text" className="form-control" onInput={(e) => {setTelefono(e.target.value)}} />
                         </div>
-                        <button type="button" className="btn btn-warning" onClick={generarOrden}>Generar Orden</button>
+                        <button type="button" className="btn btn-danger" onClick={generarOrden}>Generar Orden</button>
                     </form>
                 </div>
                 <div className="col-md-6 text-center">
@@ -82,7 +82,7 @@ const Checkout = () => {
             </div>
             <div className="row my-5">
                 <div className="col text-center">
-                    {orderId ? <div class="alert alert-warning p-5 text-center" role="alert">
+                    {orderId ? <div class="alert alert-danger p-5 text-center" role="alert">
                         <p className="display-1">👟</p>
                         <h1>Gracias por tu Compra!</h1>
                         <p>Tu ID de Compra es: <b>{orderId}</b></p>

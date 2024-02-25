@@ -24,7 +24,6 @@ const ItemCount = ({stock, onAdd}) => {
             setCounter(1);
             onAdd(counter);
             setItemAdded(true);
-            //console.log("Agregaste " + counter + " productos al carrito. Quedan " + (itemStock - counter) + " productos disponibles.");
         }
     }
 
@@ -37,15 +36,15 @@ const ItemCount = ({stock, onAdd}) => {
             <div className="row my-1">
                 <div className="col-md-4">
                     <div className="btn-group" role="group" aria-label="Basic example">
-                        <button type="button" className="btn btn-warning" onClick={decrementar}>-</button>
-                        <button type="button" className="btn btn-warning">{counter}</button>
-                        <button type="button" className="btn btn-warning" onClick={incrementar}>+</button>
+                        <button type="button" className="btn btn-danger" onClick={decrementar}>-</button>
+                        <button type="button" className="btn btn-danger">{counter}</button>
+                        <button type="button" className="btn btn-danger" onClick={incrementar}>+</button>
                     </div>
                 </div>
             </div>
             <div className="row my-1">
                 <div className="col-md-5">
-                    {itemAdded ? <Link to={"/cart"} className="btn btn-warning">Terminar Mi Compra</Link> : <button type="button" className="btn btn-warning" onClick={addToCart}>Agregar al Carrito</button>}
+                    {itemAdded ? <Link to={"/cart"} className="btn btn-danger">Terminar Mi Compra</Link> : <button type="button" className="btn btn-danger" onClick={addToCart}>Agregar al Carrito</button>}
                 </div>
             </div>
         </>

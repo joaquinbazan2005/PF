@@ -11,30 +11,6 @@ const ItemListContainer = () => {
     const [loading, setLoading] = useState(true);
     const {id} = useParams();
 
-    // Llamada a Productos desde el archivo JSON
-    /* useEffect(() => {
-        const promesa = new Promise(resolve => {
-            setTimeout(() => {
-                resolve(id ? arrayProductos.filter(item => item.categoria === id) : arrayProductos);
-            }, 2000);
-        })
-        promesa.then(data => {
-            setItems(data);
-        })
-    }, [id]); */
-
-    // Subida de Productos a nuestra collection "items"
-    /* useEffect(() => {
-        const db = getFirestore();
-        const itemsCollection = collection(db, "items");
-
-        arrayProductos.forEach(producto => {
-            addDoc(itemsCollection, producto);
-        });
-
-        console.log("Los productos se subieron correctamente!");
-    }, []) */
-
 
     // Llamada de Productos desde el Firestore
     useEffect(() => {
